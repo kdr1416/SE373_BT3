@@ -1,0 +1,27 @@
+# src/data/constraints.yaml
+
+cabin_class:
+  preferred: economy
+  negotiable: true
+  fallback_options: [business]
+  auto_switch: false
+  require_user_confirmation_for_change: true
+
+booking_limits:
+  max_passengers_per_booking: 4
+  max_budget_vnd: 10000000    # 10M VND
+
+allowed_airlines:
+  - "Vietnam Airlines"
+  - "Vietjet Air"
+  - "Bamboo Airways"
+  - "Thai Airways"
+  - "AirAsia"
+
+tools:
+  read_only:
+    - search_flights
+    - get_flight_details
+    - check_availability
+  requires_approval:
+    - book_flight

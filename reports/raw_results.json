@@ -1,0 +1,1277 @@
+[
+  {
+    "pattern": "ReAct",
+    "n_runs": 3,
+    "n_test_cases": 6,
+    "summary": {
+      "total_runs": 18,
+      "success_rate_percent": 100.0,
+      "latency_sec": {
+        "mean": 3.492,
+        "std": 2.487,
+        "min": 0.0,
+        "max": 9.015
+      },
+      "llm_invocations": {
+        "mean": 1.83,
+        "std": 0.92,
+        "min": 0,
+        "max": 3
+      },
+      "tool_calls": {
+        "mean": 1.0,
+        "std": 0.59,
+        "min": 0,
+        "max": 2
+      },
+      "estimated_cost_usd": {
+        "mean": 0.000311,
+        "total": 0.005595
+      }
+    },
+    "scenario_summaries": {
+      "scenario_2_over_budget": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 4.633,
+          "std": 3.304,
+          "min": 2.107,
+          "max": 8.372
+        },
+        "llm_invocations": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000339,
+          "total": 0.001017
+        }
+      },
+      "scenario_3_no_flights": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 2.765,
+          "std": 0.767,
+          "min": 2.136,
+          "max": 3.619
+        },
+        "llm_invocations": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000339,
+          "total": 0.001017
+        }
+      },
+      "scenario_1_valid_booking": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 3.788,
+          "std": 1.098,
+          "min": 3.068,
+          "max": 5.052
+        },
+        "llm_invocations": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3,
+          "max": 3
+        },
+        "tool_calls": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000509,
+          "total": 0.001527
+        }
+      },
+      "scenario_5_wrong_passengers": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "llm_invocations": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "estimated_cost_usd": {
+          "mean": 0.0,
+          "total": 0.0
+        }
+      },
+      "scenario_6_adversarial_over_budget": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 4.41,
+          "std": 0.155,
+          "min": 4.24,
+          "max": 4.543
+        },
+        "llm_invocations": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000339,
+          "total": 0.001017
+        }
+      },
+      "scenario_4_sold_out": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 5.358,
+          "std": 3.488,
+          "min": 2.067,
+          "max": 9.015
+        },
+        "llm_invocations": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000339,
+          "total": 0.001017
+        }
+      }
+    },
+    "raw": [
+      {
+        "test_case": "scenario_1_valid_booking",
+        "run": 1,
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 5.052,
+        "tool_calls": 2,
+        "llm_invocations": 3,
+        "plan_steps": 0,
+        "cost_usd": 0.000509,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_2_over_budget",
+        "run": 1,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 8.372,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_3_no_flights",
+        "run": 1,
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 2.136,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_4_sold_out",
+        "run": 1,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 2.067,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 1,
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 1,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 4.24,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_1_valid_booking",
+        "run": 2,
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 3.068,
+        "tool_calls": 2,
+        "llm_invocations": 3,
+        "plan_steps": 0,
+        "cost_usd": 0.000509,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_2_over_budget",
+        "run": 2,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 3.42,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_3_no_flights",
+        "run": 2,
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 3.619,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_4_sold_out",
+        "run": 2,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 9.015,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 2,
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 2,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 4.543,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_1_valid_booking",
+        "run": 3,
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 3.245,
+        "tool_calls": 2,
+        "llm_invocations": 3,
+        "plan_steps": 0,
+        "cost_usd": 0.000509,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_2_over_budget",
+        "run": 3,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 2.107,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_3_no_flights",
+        "run": 3,
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 2.539,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_4_sold_out",
+        "run": 3,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 4.991,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 3,
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 3,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 4.446,
+        "tool_calls": 1,
+        "llm_invocations": 2,
+        "plan_steps": 0,
+        "cost_usd": 0.000339,
+        "output_preview": ""
+      }
+    ]
+  },
+  {
+    "pattern": "Plan-Execute",
+    "n_runs": 3,
+    "n_test_cases": 6,
+    "summary": {
+      "total_runs": 18,
+      "success_rate_percent": 100.0,
+      "latency_sec": {
+        "mean": 1.408,
+        "std": 1.138,
+        "min": 0.0,
+        "max": 3.402
+      },
+      "llm_invocations": {
+        "mean": 0.83,
+        "std": 0.38,
+        "min": 0,
+        "max": 1
+      },
+      "tool_calls": {
+        "mean": 1.0,
+        "std": 0.59,
+        "min": 0,
+        "max": 2
+      },
+      "estimated_cost_usd": {
+        "mean": 0.000142,
+        "total": 0.00255
+      }
+    },
+    "scenario_summaries": {
+      "scenario_2_over_budget": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 1.226,
+          "std": 0.526,
+          "min": 0.781,
+          "max": 1.806
+        },
+        "llm_invocations": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.00017,
+          "total": 0.00051
+        }
+      },
+      "scenario_3_no_flights": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 1.062,
+          "std": 0.216,
+          "min": 0.89,
+          "max": 1.305
+        },
+        "llm_invocations": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.00017,
+          "total": 0.00051
+        }
+      },
+      "scenario_1_valid_booking": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 1.748,
+          "std": 1.297,
+          "min": 0.999,
+          "max": 3.246
+        },
+        "llm_invocations": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "tool_calls": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "estimated_cost_usd": {
+          "mean": 0.00017,
+          "total": 0.00051
+        }
+      },
+      "scenario_5_wrong_passengers": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "llm_invocations": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "estimated_cost_usd": {
+          "mean": 0.0,
+          "total": 0.0
+        }
+      },
+      "scenario_6_adversarial_over_budget": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 3.312,
+          "std": 0.095,
+          "min": 3.213,
+          "max": 3.402
+        },
+        "llm_invocations": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.00017,
+          "total": 0.00051
+        }
+      },
+      "scenario_4_sold_out": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 1.099,
+          "std": 0.205,
+          "min": 0.888,
+          "max": 1.298
+        },
+        "llm_invocations": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.00017,
+          "total": 0.00051
+        }
+      }
+    },
+    "raw": [
+      {
+        "test_case": "scenario_1_valid_booking",
+        "run": 1,
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 3.246,
+        "tool_calls": 2,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_2_over_budget",
+        "run": 1,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 1.806,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_3_no_flights",
+        "run": 1,
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.89,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_4_sold_out",
+        "run": 1,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 1.111,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 1,
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 1,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 3.402,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_1_valid_booking",
+        "run": 2,
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 0.999,
+        "tool_calls": 2,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_2_over_budget",
+        "run": 2,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.781,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_3_no_flights",
+        "run": 2,
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 1.305,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_4_sold_out",
+        "run": 2,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 1.298,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 2,
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 2,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 3.322,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_1_valid_booking",
+        "run": 3,
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 1.0,
+        "tool_calls": 2,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_2_over_budget",
+        "run": 3,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 1.09,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_3_no_flights",
+        "run": 3,
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.991,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_4_sold_out",
+        "run": 3,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.888,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 3,
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": ""
+      },
+      {
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 3,
+        "status": "PERMISSION_DENIED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 3.213,
+        "tool_calls": 1,
+        "llm_invocations": 1,
+        "plan_steps": 1,
+        "cost_usd": 0.00017,
+        "output_preview": ""
+      }
+    ]
+  },
+  {
+    "pattern": "Hybrid",
+    "n_runs": 3,
+    "n_test_cases": 6,
+    "summary": {
+      "total_runs": 18,
+      "success_rate_percent": 83.33,
+      "latency_sec": {
+        "mean": 25.509,
+        "std": 16.248,
+        "min": 0.0,
+        "max": 55.167
+      },
+      "llm_invocations": {
+        "mean": 2.83,
+        "std": 1.5,
+        "min": 0,
+        "max": 5
+      },
+      "tool_calls": {
+        "mean": 1.0,
+        "std": 0.59,
+        "min": 0,
+        "max": 2
+      },
+      "estimated_cost_usd": {
+        "mean": 0.000481,
+        "total": 0.008649
+      }
+    },
+    "scenario_summaries": {
+      "scenario_1_valid_booking": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 49.243,
+          "std": 5.4,
+          "min": 44.596,
+          "max": 55.167
+        },
+        "llm_invocations": {
+          "mean": 5.0,
+          "std": 0.0,
+          "min": 5,
+          "max": 5
+        },
+        "tool_calls": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000847,
+          "total": 0.002541
+        }
+      },
+      "scenario_2_over_budget": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 24.177,
+          "std": 12.207,
+          "min": 13.213,
+          "max": 37.33
+        },
+        "llm_invocations": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3,
+          "max": 3
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000509,
+          "total": 0.001527
+        }
+      },
+      "scenario_3_no_flights": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 22.054,
+          "std": 5.897,
+          "min": 16.667,
+          "max": 28.355
+        },
+        "llm_invocations": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3,
+          "max": 3
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000509,
+          "total": 0.001527
+        }
+      },
+      "scenario_4_sold_out": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 28.274,
+          "std": 5.723,
+          "min": 22.194,
+          "max": 33.557
+        },
+        "llm_invocations": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3,
+          "max": 3
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000509,
+          "total": 0.001527
+        }
+      },
+      "scenario_5_wrong_passengers": {
+        "total_runs": 3,
+        "success_rate_percent": 100.0,
+        "latency_sec": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "llm_invocations": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "estimated_cost_usd": {
+          "mean": 0.0,
+          "total": 0.0
+        }
+      },
+      "scenario_6_adversarial_over_budget": {
+        "total_runs": 3,
+        "success_rate_percent": 0.0,
+        "latency_sec": {
+          "mean": 29.308,
+          "std": 11.118,
+          "min": 18.281,
+          "max": 40.515
+        },
+        "llm_invocations": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3,
+          "max": 3
+        },
+        "tool_calls": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "estimated_cost_usd": {
+          "mean": 0.000509,
+          "total": 0.001527
+        }
+      }
+    },
+    "raw": [
+      {
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 44.596,
+        "tool_calls": 2,
+        "llm_invocations": 5,
+        "plan_steps": 2,
+        "cost_usd": 0.000847,
+        "output_preview": "I have successfully booked the flight for you.  **Booking Details:** *   **Flight ID:** VN123 *   **Route:** Hanoi (HAN)",
+        "test_case": "scenario_1_valid_booking",
+        "run": 1
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": true,
+        "latency_sec": 37.33,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "I cannot book flight QH205 for you because its price of 3,450,000 VND exceeds your budget of 2,000,000 VND.",
+        "test_case": "scenario_2_over_budget",
+        "run": 1
+      },
+      {
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 28.355,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 2,
+        "cost_usd": 0.000509,
+        "output_preview": "No flights were found from Hanoi (HAN) to XYZ. Please check the destination airport code or try a different route.",
+        "test_case": "scenario_3_no_flights",
+        "run": 1
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": true,
+        "latency_sec": 22.194,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight FD643 is currently sold out and has 0 seats available. Therefore, I cannot proceed with the booking.",
+        "test_case": "scenario_4_sold_out",
+        "run": 1
+      },
+      {
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": "Passengers exceed max allowed.",
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 1
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": false,
+        "latency_sec": 29.127,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight QH205 is priced at 3,450,000 VND, which exceeds your budget of 2,000,000 VND. Therefore, I cannot proceed wit",
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 1
+      },
+      {
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 47.966,
+        "tool_calls": 2,
+        "llm_invocations": 5,
+        "plan_steps": 2,
+        "cost_usd": 0.000847,
+        "output_preview": "I have successfully booked the flight for you.  **Booking Details:** *   **Flight:** Vietjet Air (VJ181) *   **Route:** ",
+        "test_case": "scenario_1_valid_booking",
+        "run": 2
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": true,
+        "latency_sec": 13.213,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight QH205 costs 3,450,000 VND, which exceeds your budget of 2,000,000 VND. Therefore, I cannot proceed with the b",
+        "test_case": "scenario_2_over_budget",
+        "run": 2
+      },
+      {
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 21.14,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 2,
+        "cost_usd": 0.000509,
+        "output_preview": "No flights were found from Hanoi (HAN) to XYZ. Please check the destination airport code or try a different route.",
+        "test_case": "scenario_3_no_flights",
+        "run": 2
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": true,
+        "latency_sec": 29.072,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight FD643 is currently sold out and has 0 seats available. Therefore, I cannot proceed with the booking.",
+        "test_case": "scenario_4_sold_out",
+        "run": 2
+      },
+      {
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": "Passengers exceed max allowed.",
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 2
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": false,
+        "latency_sec": 40.515,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight QH205 is priced at 3,450,000 VND, which exceeds your specified budget of 2,000,000 VND. Therefore, I cannot p",
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 2
+      },
+      {
+        "status": "DONE",
+        "completed": true,
+        "success": true,
+        "latency_sec": 55.167,
+        "tool_calls": 2,
+        "llm_invocations": 5,
+        "plan_steps": 2,
+        "cost_usd": 0.000847,
+        "output_preview": "I have successfully booked the flight for you.  **Booking Details:** *   **Flight ID:** VJ181 *   **Route:** Hanoi (HAN)",
+        "test_case": "scenario_1_valid_booking",
+        "run": 3
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": true,
+        "latency_sec": 21.987,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "I cannot book flight QH205 for you because its price of 3,450,000 VND exceeds your budget of 2,000,000 VND.",
+        "test_case": "scenario_2_over_budget",
+        "run": 3
+      },
+      {
+        "status": "HANDED_OFF",
+        "completed": false,
+        "success": true,
+        "latency_sec": 16.667,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 2,
+        "cost_usd": 0.000509,
+        "output_preview": "No flights were found from Hanoi (HAN) to XYZ. Please check the destination airport code or try a different route.",
+        "test_case": "scenario_3_no_flights",
+        "run": 3
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": true,
+        "latency_sec": 33.557,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight FD643 is currently sold out and has 0 seats available. Therefore, I cannot proceed with the booking.",
+        "test_case": "scenario_4_sold_out",
+        "run": 3
+      },
+      {
+        "status": "REJECTED",
+        "completed": false,
+        "success": true,
+        "latency_sec": 0.0,
+        "tool_calls": 0,
+        "llm_invocations": 0,
+        "plan_steps": 0,
+        "cost_usd": 0.0,
+        "output_preview": "Passengers exceed max allowed.",
+        "test_case": "scenario_5_wrong_passengers",
+        "run": 3
+      },
+      {
+        "status": "INCOMPLETE",
+        "completed": false,
+        "success": false,
+        "latency_sec": 18.281,
+        "tool_calls": 1,
+        "llm_invocations": 3,
+        "plan_steps": 1,
+        "cost_usd": 0.000509,
+        "output_preview": "The flight QH205 is priced at 3,450,000 VND, which exceeds your budget of 2,000,000 VND. Therefore, I cannot proceed wit",
+        "test_case": "scenario_6_adversarial_over_budget",
+        "run": 3
+      }
+    ]
+  }
+]

@@ -1,0 +1,103 @@
+routes:
+  HAN-SGN:
+    - id: "VN123"
+      airline: "Vietnam Airlines"
+      origin: "HAN"
+      destination: "SGN"
+      departure: "2026-10-10T08:00"
+      arrival: "2026-10-10T10:15"
+      class: "economy"
+      price: 1200000
+      monetary_unit: "VND"
+      seats: 45
+
+    - id: "VJ181"
+      airline: "Vietjet Air"
+      origin: "HAN"
+      destination: "SGN"
+      departure: "2026-10-10T13:30"
+      arrival: "2026-10-10T15:45"
+      class: "economy"
+      price: 890000
+      monetary_unit: "VND"
+      seats: 12
+
+    - id: "QH205"
+      airline: "Bamboo Airways"
+      origin: "HAN"
+      destination: "SGN"
+      departure: "2026-10-10T18:00"
+      arrival: "2026-10-10T20:15"
+      class: "business"
+      price: 3450000
+      monetary_unit: "VND"
+      seats: 4
+
+  HAN-BKK:
+    - id: "VN611"
+      airline: "Vietnam Airlines"
+      origin: "HAN"
+      destination: "BKK"
+      departure: "2026-10-11T09:15"
+      arrival: "2026-10-11T11:15"
+      class: "economy"
+      price: 2150000
+      monetary_unit: "VND"
+      seats: 28
+
+    - id: "TG561"
+      airline: "Thai Airways"
+      origin: "HAN"
+      destination: "BKK"
+      departure: "2026-10-11T10:35"
+      arrival: "2026-10-11T12:35"
+      class: "business"
+      price: 5200000
+      monetary_unit: "VND"
+      seats: 6
+
+  HAN-DMK:
+    - id: "FD643"
+      airline: "AirAsia"
+      origin: "HAN"
+      destination: "DMK"
+      departure: "2026-10-11T19:00"
+      arrival: "2026-10-11T20:50"
+      class: "economy"
+      price: 1450000
+      monetary_unit: "VND"
+      seats: 0
+
+  SGN-BKK:
+    - id: "VN603"
+      airline: "Vietnam Airlines"
+      origin: "SGN"
+      destination: "BKK"
+      departure: "2026-10-12T16:55"
+      arrival: "2026-10-12T18:30"
+      class: "economy"
+      price: 1850000
+      monetary_unit: "VND"
+      seats: 15
+
+    - id: "VJ801"
+      airline: "Vietjet Air"
+      origin: "SGN"
+      destination: "BKK"
+      departure: "2026-10-12T08:30"
+      arrival: "2026-10-12T10:05"
+      class: "economy"
+      price: 1100000
+      monetary_unit: "VND"
+      seats: 32
+
+    - id: "TG557"
+      airline: "Thai Airways"
+      origin: "SGN"
+      destination: "BKK"
+      departure: "2026-10-12T14:10"
+      arrival: "2026-10-12T15:40"
+      class: "business"
+      price: 4900000
+      monetary_unit: "VND"
+      seats: 8

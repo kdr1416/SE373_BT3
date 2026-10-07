@@ -1,0 +1,25 @@
+# Environments & Credentials
+.env
+.venv/
+env/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary & Scratch files
+scratch/
+*.log
+
+# Databases & OS files
+*.db
+*.sqlite3
+.DS_Store
+Thumbs.db
